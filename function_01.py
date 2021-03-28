@@ -138,8 +138,8 @@ class NLP_tool():
         if os.path.exists('crawl-300d-2M.vec'):
             print("File have already downloaded.")
             return
-        !wget 'https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M.vec.zip'
-        !unzip 'crawl-300d-2M.vec.zip'
+        os.systems('wget https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M.vec.zip')
+        os.systems('unzip crawl-300d-2M.vec.zip')
         os.remove('crawl-300d-2M.vec.zip')
 
     def build_fasttext_embedding_dict(self):
